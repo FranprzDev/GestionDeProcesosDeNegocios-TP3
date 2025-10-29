@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n8n: El Futuro de la Automatización</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carga de la fuente Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Configuración de Tailwind para usar Inter -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos base para el cuerpo */
+        body {
+            background-color: #0a0a0a;
+            color: #f0f0f0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Contenedor principal de la presentación */
+        #presentation-container {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Estilo base de cada diapositiva */
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease-in-out;
+            transform: scale(0.98);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            text-align: center;
+        }
+
+        /* Estilo de la diapositiva activa */
+        .slide.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* Estilo fachero para los títulos principales */
+        .gradient-text {
+            background-image: linear-gradient(to right, #4ade80, #38b2ac, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-100">
+
+    <div id="presentation-container">
+
+        <!-- Slide 1: Título -->
+        <div class="slide active">
+            <h1 class="text-5xl md:text-8xl font-black gradient-text">n8n: El Futuro de la Automatización</h1>
+            <h2 class="text-2xl md:text-4xl text-gray-300 mt-6">Conectá todas tus apps con Inteligencia Artificial.</h2>
+            <img src="https://placehold.co/1200x600/0a0a0a/4ade80?text=n8n+%2B+IA" 
+                 alt="Imagen futurista de n8n conectando con IA"
+                 class="mt-10 rounded-lg shadow-2xl shadow-green-500/20 max-w-3xl w-full"
+                 onerror="this.src='https://placehold.co/1200x600/0a0a0a/4ade80?text=Error+Cargando+Imagen'">
+        </div>
+
+        <!-- Slide 2: Problema + Solución -->
+        <div class="slide">
+            <h2 class="text-4xl md:text-6xl font-black gradient-text">El Problema: Tu IA está Aislada</h2>
+            <p class="text-2xl md:text-4xl text-gray-300 mt-8 max-w-4xl">
+                No puede leer tus emails, acceder a tus archivos o hablar con tus clientes.
+            </p>
+            <p class="mt-10 text-3xl md:text-5xl font-bold text-green-400 max-w-5xl">
+                La Solución: n8n es el "Director de Orquesta" que la conecta con el mundo real y le da herramientas.
+            </p>
+        </div>
+
+        <!-- Slide 3: La Magia (RAG) -->
+        <div class="slide">
+            <h2 class="text-4xl md:text-6xl font-black gradient-text">Dale "Súper-Memoria" a tu IA</h2>
+            <p class="text-2xl md:text-4xl text-gray-300 mt-8 max-w-4xl">
+                Conectá tus propios datos: PDFs, documentos, bases de datos.
+            </p>
+            <p class="mt-10 text-3xl md:text-5xl font-bold text-green-400 max-w-4xl">
+                Tu IA responderá con *tu* información, no solo con la de Internet.
+            </p>
+        </div>
+
+        <!-- Slide 4: ¿Qué podés hacer? (Resumen de Preguntas) -->
+        <div class="slide">
+            <h2 class="text-4xl md:text-6xl font-black gradient-text">¿Qué podés hacer?</h2>
+            <p class="text-2xl md:text-4xl text-gray-300 mt-8 max-w-4xl">
+                Desde tareas simples hasta crear asistentes de IA.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 mt-10 w-full max-w-6xl">
+                <div class="bg-gray-900/50 p-8 rounded-lg border border-gray-700">
+                    <h3 class="text-2xl font-bold text-green-400">Conectá Todo</h3>
+                    <p class="mt-4 text-gray-300">Conectá +400 apps, APIs, y bases de datos con un clic.</p>
+                </div>
+                <div class="bg-gray-900/50 p-8 rounded-lg border border-gray-700">
+                    <h3 class="text-2xl font-bold text-blue-400">Diseñá Asistentes</h3>
+                    <p class="mt-4 text-gray-300">Dale "herramientas" a la IA para que clasifique emails o resuma PDFs.</p>
+                </div>
+                <div class="bg-gray-900/50 p-8 rounded-lg border border-gray-700">
+                    <h3 class="text-2xl font-bold text-teal-400">Casos Reales</h3>
+                    <p class="mt-4 text-gray-300">Automatizá Marketing, Ventas, Soporte o tu productividad personal.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Cierre (Serio) -->
+        <div class="slide">
+            <h2 class="text-5xl md:text-7xl font-black gradient-text">Definiendo el Siguiente Sistema</h2>
+            <p class="text-2xl md:text-3xl text-gray-300 mt-8 max-w-4xl">
+                La herramienta ya está. Ahora la pregunta es: ¿qué proceso estratégico vamos a diseñar?
+            </p>
+            <p class="text-xl md:text-2xl text-gray-300 mt-10 max-w-4xl">
+                El objetivo es aplicar esta tecnología para construir un sistema que sea:
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 mt-10 w-full max-w-6xl text-left">
+                <div class="bg-gray-900/50 p-6 rounded-lg border border-blue-400">
+                    <h3 class="text-2xl font-bold text-blue-400">Inteligente</h3>
+                    <p class="mt-2 text-gray-300">Que tome decisiones, no solo siga reglas.</p>
+                </div>
+                <div class="bg-gray-900/50 p-6 rounded-lg border border-green-400">
+                    <h3 class="text-2xl font-bold text-green-400">Autónomo</h3>
+                    <p class="mt-2 text-gray-300">Que requiera la menor intervención humana posible.</p>
+                </div>
+                <div class="bg-gray-900/50 p-6 rounded-lg border border-teal-400">
+                    <h3 class="text-2xl font-bold text-teal-400">Escalable</h3>
+                    <p class="mt-2 text-gray-300">Que pueda crecer y adaptarse a nueva demanda.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Controles de Navegación -->
+    <button id="prevBtn" class="fixed bottom-8 left-8 z-50 bg-gray-800/50 backdrop-blur-sm text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-500 transition-colors duration-300">
+        &larr; Anterior
+    </button>
+    <button id="nextBtn" class="fixed bottom-8 right-8 z-50 bg-gray-800/50 backdrop-blur-sm text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-500 transition-colors duration-300">
+        Siguiente &rarr;
+    </button>
+
+    <!-- Contador de Diapositivas -->
+    <div id="slide-counter" class="fixed top-8 right-8 z-50 text-gray-500 font-mono text-lg"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentSlide = 0;
+            // Corregido: Seleccionar todas las diapositivas
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+            const counter = document.getElementById('slide-counter');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            function showSlide(n) {
+                // Ocultar todas las diapositivas
+                slides.forEach((slide, index) => {
+                    if (index === n) {
+                        slide.classList.add('active');
+                    } else {
+                        slide.classList.remove('active');
+                    }
+                });
+
+                // Actualizar contador
+                counter.textContent = `${n + 1} / ${totalSlides}`;
+
+                // Mostrar/Ocultar botones
+                prevBtn.style.display = n === 0 ? 'none' : 'block';
+                nextBtn.style.display = n === totalSlides - 1 ? 'none' : 'block';
+            }
+
+            function next() {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            }
+
+            function prev() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            }
+
+            // Event Listeners para botones
+            nextBtn.addEventListener('click', next);
+            prevBtn.addEventListener('click', prev);
+
+            // Event Listeners para teclado
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    next();
+                } else if (e.key === 'ArrowLeft') {
+                    prev();
+                }
+            });
+
+            // Mostrar la primera diapositiva al cargar
+            showSlide(0);
+        });
+    </script>
+
+</body>
+</html>
+
+
